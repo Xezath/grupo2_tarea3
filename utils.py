@@ -49,10 +49,10 @@ def calcular_costos(ruta, matriz1, matriz2):
 # Genera una única ruta aleatoria (permuta de las ciudades)
 def generar_ruta_aleatoria(num_ciudades):
     ruta = list(range(num_ciudades))
-    random.shuffle(ruta)
+    random.shuffle(ruta) #Usa random.shuffle para desordenar las ciudades. Cada ruta representa una posible solución al problema
     return ruta
 
-# Genera una población de rutas aleatorias
+# Genera una población de rutas aleatorias y las agrupa como la población inicial del algoritmo.
 def generar_poblacion_inicial(num_ciudades, tam_poblacion):
     return [generar_ruta_aleatoria(num_ciudades) for _ in range(tam_poblacion)]
 
@@ -63,7 +63,7 @@ def generar_poblacion_inicial(num_ciudades, tam_poblacion):
 def domina(cost1, cost2):
     return (cost1[0] <= cost2[0] and cost1[1] <= cost2[1]) and (cost1[0] < cost2[0] or cost1[1] < cost2[1])
 
-# Calcula los frentes de Pareto de un conjunto de soluciones
+# Calcula los frentes de Pareto de un conjunto de soluciones, agrupando soluciones no dominadas en niveles
 def calcular_frentes(costos):
     frentes = []
     S = [[] for _ in range(len(costos))]    # Dominados por cada solución
