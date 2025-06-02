@@ -1,0 +1,6 @@
+Tam_poblacion = 100
+Generaciones = 300
+Prob_mutacion = 0,2
+tamano_archivo = 50
+
+para nsga y spea (en el caso de archivo es solo para spea)

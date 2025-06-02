@@ -1,0 +1,40 @@
+Lo que hicimos con el código:
+Leer la instancia del problema:
+
+Leímos el archivo con los datos del TSP bi-objetivo (número de ciudades y dos matrices de costos).
+
+Cada matriz contiene el costo entre ciudades para cada uno de los dos objetivos.
+
+Representar soluciones:
+
+Cada solución es una ruta o secuencia que visita todas las ciudades una vez y regresa a la inicial.
+
+Implementamos cómo evaluar una ruta en ambos objetivos (sumar costos según las matrices).
+
+Generar una población inicial:
+
+Creamos un conjunto de rutas aleatorias para empezar.
+
+Implementar el algoritmo NSGA-II:
+
+Este es un algoritmo genético diseñado para problemas con varios objetivos.
+
+Utiliza técnicas para mantener diversidad y aproximarse al frente de Pareto:
+
+Dominancia para clasificar soluciones en frentes.
+
+Distancia de hacinamiento para mantener diversidad.
+
+Operadores genéticos (crossover y mutación) para generar nuevas soluciones.
+
+Selección por torneo para elegir soluciones para la próxima generación.
+
+Iterar durante varias generaciones:
+
+En cada generación, se evalúan las soluciones, se seleccionan las mejores según dominancia y diversidad, y se generan nuevas soluciones.
+
+Así, la población evoluciona hacia un conjunto más cercano al frente de Pareto verdadero.
+
+Al final, obtenemos el frente de Pareto:
+
+El conjunto de soluciones no dominadas de la última generación, que son buenas soluciones que balancean ambos objetivos.
